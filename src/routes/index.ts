@@ -3,6 +3,6 @@ import usersRouter from './users';
 
 const routes = Router();
 
-routes.use('/api/users', usersRouter);
+routes.use('/api/v1/users', usersRouter);
 
 export default routes;

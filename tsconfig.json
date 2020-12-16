@@ -8,7 +8,8 @@
     "outDir": "build",                    
     "rootDir": "src",                         
     "removeComments": true,               
-    "strict": true,                        
+    "strict": false,          
+    "noImplicitAny": false,              
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"

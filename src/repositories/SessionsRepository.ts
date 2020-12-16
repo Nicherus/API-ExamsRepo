@@ -16,7 +16,6 @@ export const createSession = async (
 		);
 		return session;
 	} catch (error) {
-		console.log(error.message);
 		return null;
 	}
 };

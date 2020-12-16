@@ -1,14 +1,5 @@
 import joi from 'joi';
 
-export const validateLogin = (data: any) =>{
-	const user = joi.object({
-		email: joi.string().email().required(),
-		password: joi.string().min(6).required(),
-	});
-
-	const validation = user.validate(data);
-	return !validation.error;
-};
 
 export const validateUser = (
 	email: string, 
@@ -34,3 +25,14 @@ export const validateUser = (
 	const validation = user.validate(data);
 	return !validation.error;
 };
+
+export const validateLogin = (data: any) =>{
+	const user = joi.object({
+		email: joi.string().email().required(),
+		password: joi.string().min(6).required(),
+	});
+
+	const validation = user.validate(data);
+	return !validation.error;
+};
+
