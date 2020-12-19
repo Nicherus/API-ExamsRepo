@@ -1,4 +1,4 @@
-import { getUserIdByToken} from '../repositories/SessionsRepository';
+import { getUserIdByToken} from '../repositories/sessionsRepository';
 
 const authMiddleware = async (req, res, next): Promise<any> => {
 
@@ -6,7 +6,7 @@ const authMiddleware = async (req, res, next): Promise<any> => {
 	if (!auth) return res.status(401).send({ error: 'Auth header not found' });
 
 	const token = auth.split(' ')[1];
-	if (!token) return res.status(401).send({ error: 'token header not found' });
+	if (!token) return res.status(401).send({ error: 'Token header not found' });
 
 	const sessionUserId = await getUserIdByToken(token);
 	if (!sessionUserId) return res.status(401).send({ error: 'Invalid token' });

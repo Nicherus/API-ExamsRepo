@@ -23,16 +23,27 @@ export const validateUser = (
 	};
 
 	const validation = user.validate(data);
-	return !validation.error;
+	
+	return !!validation.error;
 };
 
-export const validateLogin = (data: any) =>{
+export const validateSignIn = (
+	email: string,
+	password: string,
+) : boolean =>{
+
 	const user = joi.object({
 		email: joi.string().email().required(),
 		password: joi.string().min(6).required(),
 	});
 
+	const data = {
+		email,
+		password,
+	};
+
 	const validation = user.validate(data);
-	return !validation.error;
+	
+	return !!validation.error;
 };
 
