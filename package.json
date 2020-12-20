@@ -19,7 +19,7 @@
     "typescript": "^4.0.5"
   },
   "engines": {
-    "node": "12.18.4"
+    "node": ">=12.18.4"
   },
   "dependencies": {
     "@types/bcrypt": "^3.0.0",
