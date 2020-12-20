@@ -1,4 +1,4 @@
-import { getExamsByDisciplineData, getExamsByProfessorData, registerExamData, getExamsByProfessorAndTypeData, getExamsByDisciplineAndTypeData } from 'src/repositories/examsRepository';
+import { getExamsByDisciplineData, getExamsByProfessorData, registerExamData, getExamsByProfessorAndTypeData, getExamsByDisciplineAndTypeData } from '../repositories/examsRepository';
 
 export const registerExam = async (request, response) : Promise<any> => {
 	const { pdf, name, exams_types_id, disciplines_id, professors_id } = request.body;

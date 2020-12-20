@@ -1,4 +1,4 @@
-import Discipline from 'src/models/Discipline';
+import Discipline from '../models/Discipline';
 import db from '../database/index';
 
 export const getDisciplinesData = async () : Promise<Discipline | null | any> => {

@@ -1,4 +1,4 @@
-import { validateUser, validateSignIn } from 'src/validations/users';
+import { validateUser, validateSignIn } from '../validations/users';
 import { isInDatabase } from '../repositories/usersRepository';
 
 export const signUpMiddleware = async (request, response, next): Promise<any> => {

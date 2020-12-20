@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getExamsTypes } from 'src/controllers/examsTypesController.ts';
+import { getExamsTypes } from '../controllers/examsTypesController.ts';
 
 const examsTypesRouter = Router();
 

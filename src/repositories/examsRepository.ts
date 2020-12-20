@@ -1,4 +1,4 @@
-import Exam from 'src/models/Exam';
+import Exam from '../models/Exam';
 import db from '../database/index';
 
 export const registerExamData = async (

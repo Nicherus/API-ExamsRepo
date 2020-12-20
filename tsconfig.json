@@ -6,7 +6,7 @@
     "lib": ["es6"],                        
     "allowJs": true,                       
     "outDir": "build",                    
-    "rootDir": "src",                         
+    "rootDir": ".",                         
     "removeComments": true,               
     "strict": false,          
     "noImplicitAny": false,              

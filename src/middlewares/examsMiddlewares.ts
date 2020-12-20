@@ -1,4 +1,4 @@
-import { validateExam } from 'src/validations/exams';
+import { validateExam } from '../validations/exams';
 
 
 export const registerExamMiddleware = async (request, response, next): Promise<any> => {

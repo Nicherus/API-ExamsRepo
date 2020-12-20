@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { getDisciplines } from 'src/controllers/disciplinesController';
-import { getExamsByDiscipline, getExamsByDisciplineAndType } from 'src/controllers/examsController';
-import { getProfessorsByDiscipline } from 'src/controllers/professorsController';
-import { examsByDisciplineAndTypeMiddleware, examsByDisciplineMiddleware } from 'src/middlewares/examsMiddlewares';
-import { professorsByDisciplineMiddleware } from 'src/middlewares/professorsMiddlewares';
+import { getDisciplines } from '../controllers/disciplinesController';
+import { getExamsByDiscipline, getExamsByDisciplineAndType } from '../controllers/examsController';
+import { getProfessorsByDiscipline } from '../controllers/professorsController';
+import { examsByDisciplineAndTypeMiddleware, examsByDisciplineMiddleware } from '../middlewares/examsMiddlewares';
+import { professorsByDisciplineMiddleware } from '../middlewares/professorsMiddlewares';
 
 const disciplinesRouter = Router();
 

@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { getExamsByProfessor, getExamsByProfessorAndType } from 'src/controllers/examsController';
-import { getProfessors } from 'src/controllers/professorsController';
-import { examsByDisciplineMiddleware, examsByProfessorAndTypeMiddleware, examsByProfessorMiddleware } from 'src/middlewares/examsMiddlewares';
+import { getExamsByProfessor, getExamsByProfessorAndType } from '../controllers/examsController';
+import { getProfessors } from '../controllers/professorsController';
+import { examsByDisciplineMiddleware, examsByProfessorAndTypeMiddleware, examsByProfessorMiddleware } from '../middlewares/examsMiddlewares';
 
 const professorsRouter = Router();
 

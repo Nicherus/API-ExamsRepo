@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { registerExam } from 'src/controllers/examsController';
-import { registerExamMiddleware } from 'src/middlewares/examsMiddlewares';
+import { registerExam } from '../controllers/examsController';
+import { registerExamMiddleware } from '../middlewares/examsMiddlewares';
 
 const examsRouter = Router();
 

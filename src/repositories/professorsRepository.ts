@@ -1,4 +1,4 @@
-import Professor from 'src/models/Professor';
+import Professor from '../models/Professor';
 import db from '../database/index';
 
 export const getProfessorsData = async () : Promise<Professor | null | any> => {

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import authMiddleware from 'src/middlewares/authMiddleware';
-import { signInMiddleware, signUpMiddleware } from 'src/middlewares/usersMiddlewares';
+import authMiddleware from '../middlewares/authMiddleware';
+import { signInMiddleware, signUpMiddleware } from '../middlewares/usersMiddlewares';
 import { signIn, signUp, signOut } from '../controllers/usersController';
 
 const userRouter = Router();
