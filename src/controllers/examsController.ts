@@ -1,4 +1,4 @@
-import { getExamsByDisciplineData, getExamsByProfessorData, registerExamData, getExamsByProfessorAndTypeData, getExamsByDisciplineAndTypeData } from '../repositories/examsRepository';
+import { getExamsByDisciplineData, getExamsByProfessorData, registerExamData, getExamsByProfessorAndTypeData, getExamsByDisciplineAndTypeData, getExamsData } from '../repositories/examsRepository';
 
 export const registerExam = async (request, response) : Promise<any> => {
 	const { pdf, name, exams_types_id, disciplines_id, professors_id } = request.body;
@@ -9,6 +9,18 @@ export const registerExam = async (request, response) : Promise<any> => {
 	
 	return response.status(500).send({error: 'internal error please send this to a developer'});
 };
+
+
+export const getExams = async (request, response) : Promise<any> => {
+
+	const examsData = await getExamsData();
+
+	if(examsData) return response.status(200).send(examsData);
+
+	return response.status(500).send({error: 'internal error please send this to a developer'});
+
+};
+
 
 export const getExamsByDiscipline = async (request, response) : Promise<any> => {
 	const disciplineId = request.id;

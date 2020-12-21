@@ -21,7 +21,6 @@ export const validateUser = (
 		password,
 		passwordConfirmation,
 	};
-
 	const validation = user.validate(data);
 	
 	return !!validation.error;

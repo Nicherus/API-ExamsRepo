@@ -12,7 +12,7 @@ export const registerExamMiddleware = async (request, response, next): Promise<a
 };
 
 export const examsByDisciplineMiddleware = async (request, response, next): Promise<any> => {
-	const id = request.body.id;
+	const id = request.headers['id'];
 
 	if(!id) return response.status(400).send({error: 'Please, send a valid discipline id'});
 
@@ -21,7 +21,7 @@ export const examsByDisciplineMiddleware = async (request, response, next): Prom
 };
 
 export const examsByProfessorMiddleware = async (request, response, next): Promise<any> => {
-	const id = request.body.id;
+	const id = request.headers['id'];
 
 	if(!id) return response.status(400).send({error: 'Please, send a valid professor id'});
 
@@ -30,7 +30,8 @@ export const examsByProfessorMiddleware = async (request, response, next): Promi
 };
 
 export const examsByDisciplineAndTypeMiddleware = async (request, response, next): Promise<any> => {
-	const { disciplineId, typeId } = request.body;
+	const disciplineId = request.headers['disciplineid'];
+	const typeId = request.headers['typeid'];
 
 	if(!disciplineId) return response.status(400).send({error: 'Please, send a valid discipline id'});
 	if(!typeId) return response.status(400).send({error: 'Please, send a valid type id'});
@@ -41,7 +42,8 @@ export const examsByDisciplineAndTypeMiddleware = async (request, response, next
 };
 
 export const examsByProfessorAndTypeMiddleware = async (request, response, next): Promise<any> => {
-	const { professorId, typeId } = request.body;
+	const professorId = request.headers['professorid'];
+	const typeId = request.headers['typeid'];
 
 	if(!professorId) return response.status(400).send({error: 'Please, send a valid professor id'});
 	if(!typeId) return response.status(400).send({error: 'Please, send a valid type id'});

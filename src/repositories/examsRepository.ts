@@ -20,6 +20,18 @@ export const registerExamData = async (
 	}
 };
 
+
+export const getExamsData = async () : Promise<Exam | null | any> => {
+	try{
+		const exams = await db.query(`
+			SELECT * FROM exams`,
+		);
+		return exams.rows;
+	} catch(error){
+		return null;
+	}
+};
+
 export const getExamsByDisciplineData = async (disciplineId: number) : Promise<Exam | null | any> => {
 	try{
 		const examsFiltered = await db.query(`

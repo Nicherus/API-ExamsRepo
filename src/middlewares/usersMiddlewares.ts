@@ -17,7 +17,7 @@ export const signUpMiddleware = async (request, response, next): Promise<any> =>
 
 export const signInMiddleware = async (request, response, next): Promise<any> => {
 	const { email, password} = request.body;
-
+	
 	const failValidation = validateSignIn(email, password);
 
 	if(failValidation) return response.status(400).send({error: 'Please, check the data you are sending'});
